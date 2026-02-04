@@ -1,27 +1,27 @@
 @font-face {
     font-family: 'Tw Cen MT Std';
-    src: url('fonts/TW Cen MT Std/TW Cen MT Std/TwCenMTStd.otf') format('opentype');
+    src: url('fonts/twcenmtstd-webfont.woff2') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Tw Cen MT Std';
-    src: url('fonts/TW Cen MT Std/TW Cen MT Std/TwCenMTStdBold.otf') format('opentype');
+    src: url('fonts/twcenmtstdbold-webfont.woff2') format('opentype');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Tw Cen MT Std';
-    src: url('fonts/TW Cen MT Std/TW Cen MT Std/TwCenMTStdItalic.otf') format('opentype');
+    src: url('fonts/tw_cen_mt_std_bold_italic-webfont.woff2') format('opentype');
     font-weight: normal;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Tw Cen MT Std';
-    src: url('fonts/TW Cen MT Std/TW Cen MT Std/TwCenMTStdLight.otf') format('opentype');
+    src: url('fonts/twcenmtstd-webfont.woff2') format('opentype');
     font-weight: 300;
     font-style: normal;
 }
