@@ -65,6 +65,12 @@ h4 {
     color: var(--primary);
 }
 
+small {
+    float: right;
+    color: var(--text);
+    opacity: .7;
+}
+
 /* Animations */
 @keyframes fadeInDown {
     from {
