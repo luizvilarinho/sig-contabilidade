@@ -36,7 +36,7 @@
     --text-muted: #6b7280;
     --text-dark: #4b5563;
     --white: #ffffff;
-    --gray-light: #cccccc;
+    --gray-light: #f0eded;
     --footer-bg: #111827;
     --footer-border: #1f2937;
     --footer-text: #9ca3af;
@@ -312,7 +312,7 @@ a.btn-cta {
 
 /* Services */
 .services {
-    padding: 241px 0;
+    padding: 170px 0;
     background: linear-gradient(90deg, var(--secondary) 0%, var(--secondary-light) 43%, var(--secondary-light) 100%);
 }
 
@@ -440,6 +440,66 @@ footer {
     border-top: 1px solid var(--footer-border);
 }
 
+.developer-credit {
+    display: block;
+    margin-top: 15px;
+    font-size: 0.75rem;
+    color: var(--text-dark);
+    opacity: 0.5;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.developer-credit:hover {
+    opacity: 1;
+    color: var(--footer-text);
+}
+
+/* Client Logos */
+.clients-section {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.clients-section h3 {
+    margin-bottom: 40px;
+    font-size: 1.5rem;
+    color: var(--primary);
+    opacity: 0.8;
+}
+
+.clients-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 60px;
+    background-color: white;
+    padding: 20px 0;
+    position: absolute;
+    width: 100vw;
+    left: 0;
+    z-index: 1;
+    opacity: .8;
+}
+
+.clients-grid img {
+    height: 100px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(30%);
+    opacity: 1;
+    transition: all 0.3s ease;
+    mix-blend-mode: multiply;
+    /* Helps integrate jpegs with white backgrounds if needed */
+}
+
+.clients-grid img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.2);
+}
+
 /* Mobile */
 @media (max-width: 768px) {
     .hero {
@@ -490,13 +550,13 @@ footer {
 }
 
 .testimonial-card {
-    background: var(--accent);
-    /* Light gray card background */
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+    background: var(--white);
+    padding: 5;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s;
-    border: 1px solid transparent;
+    border: 2px solid var(--gray-light);
+    overflow: hidden;
 }
 
 .testimonial-card:hover {
@@ -505,40 +565,10 @@ footer {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
 }
 
-.stars {
-    color: var(--star-color);
-    /* Gold/Amber for stars */
-    margin-bottom: 20px;
-}
-
-.testimonial-text {
-    font-size: 1rem;
-    color: var(--text-dark);
-    font-style: italic;
-    margin-bottom: 25px;
-    line-height: 1.6;
-}
-
-.client-info {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.client-info img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    /* Circular */
-    object-fit: cover;
-    border: 3px solid var(--white);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.client-info h4 {
-    color: var(--primary);
-    font-size: 1rem;
-    margin-bottom: 2px;
+.testimonial-card img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 
