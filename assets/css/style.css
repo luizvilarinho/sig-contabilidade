@@ -254,7 +254,7 @@ a.btn-cta {
 
 /* About Section */
 .about {
-    padding: 210px 0;
+    padding: 290px 0;
     background: var(--white);
 }
 
@@ -319,6 +319,11 @@ a.btn-cta {
 .section-header {
     text-align: center;
     margin-bottom: 60px;
+}
+
+.section-header-depoimentos {
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 .faq-header {
@@ -481,6 +486,7 @@ footer {
     left: 0;
     z-index: 1;
     opacity: .8;
+    overflow: hidden;
 }
 
 .clients-grid img {
