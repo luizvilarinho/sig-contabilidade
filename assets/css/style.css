@@ -389,6 +389,12 @@ a.btn-cta {
     overflow: hidden;
 }
 
+.contact a,
+.contact .contact-info p {
+    text-decoration: none;
+    color: var(--secondary-light);
+}
+
 .contact::before {
     content: '';
     position: absolute;
@@ -620,6 +626,11 @@ footer {
     .nav-links.active a {
         opacity: 1;
         transform: translateY(0);
+    }
+
+    small {
+        float: unset;
+        display: block;
     }
 }
 
