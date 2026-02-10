@@ -484,15 +484,11 @@ footer {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 60px;
+    gap: 40px;
     background-color: white;
     padding: 20px 0;
-    position: absolute;
-    width: 100vw;
-    left: 0;
-    z-index: 1;
-    opacity: .8;
-    overflow: hidden;
+    width: 100%;
+    /* Removed absolute positioning to prevent overlap */
 }
 
 .clients-grid img {
@@ -512,35 +508,106 @@ footer {
     transform: scale(1.2);
 }
 
+/* Hide hamburger on desktop */
+.mobile-menu-icon {
+    display: none;
+}
+
+
 /* Mobile */
 @media (max-width: 768px) {
     .hero {
         padding: 120px 0 60px;
         text-align: center;
+        background-image: unset;
     }
 
     .hero .container {
         grid-template-columns: 1fr;
+        gap: 0;
     }
 
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.1rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        margin-bottom: 20px;
     }
 
     .hero-img {
         order: -1;
-        margin-bottom: 40px;
+        margin: 10px 0;
+
+    }
+
+    .services {
+        padding: 130px 0;
+        background-image: none;
+        background-color: #e7dbb8;
+
+        & .section-header {
+            margin-bottom: 20px;
+        }
     }
 
     .about-content {
         grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .about {
+        padding: 120px 0;
+    }
+
+    /* Mobile Menu Icon */
+    .mobile-menu-icon {
+        display: block;
+        position: absolute;
+        right: 0px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.8rem;
+        cursor: pointer;
+        color: var(--primary);
+        z-index: 1001;
     }
 
     .nav-links {
-        display: none;
-        /* In a real app, adding a hamburger menu would be better, but for this task simpler is ok */
+        /* display: none; */
+        position: fixed;
+        right: 0;
+        height: 100vh;
+        top: 0;
+        background: var(--white);
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding-top: 0px;
+        transform: translateX(100%);
+        transition: transform 0.4s ease-in-out;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        gap: 20px;
+    }
+
+    .nav-links.active {
+        transform: translateX(0%);
+    }
+
+    .nav-links a {
+        font-size: 1.5rem;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+
+    .nav-links.active a {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
+
 
 /* Portal do Cliente Specific Style */
 .portal-client {
