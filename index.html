@@ -34,6 +34,9 @@
                 <a href="#" class="logo">
                     <img src="assets/images/sig_contabilidade_logo_back.png" alt="logo SIG Contabilidade">
                 </a>
+                <div class="mobile-menu-icon">
+                    <i class="fas fa-bars"></i>
+                </div>
                 <div class="nav-links">
                     <a href="#inicio">Início</a>
                     <a href="#sobre">Sobre</a>
@@ -123,15 +126,22 @@
                     <h3>Empresas que crescem conosco</h3>
                     <div class="clients-grid">
                         <img src="assets/images/logo_clientes/equix_net.jpeg" alt="Cliente quix net" title="quix net">
+                        <div class="logo-ricci">
+                            <img src="assets/images/logo_clientes/logo light.png" alt="Cliente Light" title="Light">
+                        </div>
                         <img src="assets/images/logo_clientes/endorphin.jpeg" alt="Cliente Endorphin" title="Endorphin">
+
                         <img src="assets/images/logo_clientes/mary_help.jpeg" alt="Cliente Mary Help" title="Mary Help">
                         <img src="assets/images/logo_clientes/pv_seguros.jpeg" alt="Cliente PV Seguros"
                             title="PV Seguros">
                         <img src="assets/images/logo_clientes/dr juliana.jpeg" alt="Cliente Dra Juliana"
                             title="Dra Juliana">
-                        <!-- <img src="assets/images/logo_clientes/logo light.png" alt="Cliente Light" title="Light"> -->
                         <img src="assets/images/logo_clientes/prancheta.jpg" alt="Cliente Prancheta" title="Prancheta">
                         <img src="assets/images/logo_clientes/thais.png" alt="Cliente Thais" title="Thais">
+                        <div class="logo-ricci">
+                            <img src="assets/images/logo_clientes/ricci.png" alt="Cliente Ricci" title="Ricci">
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -226,12 +236,12 @@
                     <div class="info-item">
                         <i class="fab fa-whatsapp"></i>
                         <h3>WhatsApp</h3>
-                        <p>(17) 99758-8348</p>
+                        <p><a href="https://wa.me/5517997588348" target="_blank">(17) 99758-8348</a></p>
                     </div>
                     <div class="info-item">
                         <i class="far fa-envelope"></i>
                         <h3>E-mail</h3>
-                        <p>contato@sigcontabil.com</p>
+                        <p><a href="mailto:contato@sigcontabil.com">contato@sigcontabil.com</a></p>
                     </div>
                     <div class="info-item">
                         <i class="far fa-clock"></i>
@@ -241,7 +251,8 @@
                     <div class="info-item">
                         <i class="fab fa-instagram"></i>
                         <h3>Social</h3>
-                        <p>@sig.contabilidade</p>
+                        <p><a href="https://www.instagram.com/sig.contabilidade/" target="_blank">@sig.contabilidade</a>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -250,12 +261,13 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 SIG Consultoria e Contabilidade. Todos os direitos reservados. <small>v.1.0.4</small></p>
+            <p>&copy; 2025 SIG Consultoria e Contabilidade. Todos os direitos reservados. <small>v.1.0.7</small></p>
             <a href="https://wa.me/5511982214786" target="_blank" class="developer-credit">Desenvolvido por Luiz
                 Vilarinho</a>
         </div>
     </footer>
 
+<<<<<<< HEAD
     <a href="https://wa.me/5517997588348?text=Olá,%20gostaria%20de%20solicitar%20um%20diagnóstico%20gratuito." 
        class="whatsapp-float" 
        target="_blank"
@@ -264,6 +276,35 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
+=======
+    <script>
+        const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuIcon.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            // Toggle hamburger icon animation or change icon if desired
+            const icon = mobileMenuIcon.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Close menu when clicking a link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                const icon = mobileMenuIcon.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+    </script>
+>>>>>>> b9ba10f3bd8155552b26f89b62c38726d06f976c
 </body>
 
 </html>
