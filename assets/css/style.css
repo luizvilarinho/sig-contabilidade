@@ -494,7 +494,6 @@ footer {
     background-color: white;
     padding: 20px 0;
     width: 100%;
-    /* Removed absolute positioning to prevent overlap */
 }
 
 .clients-grid img {
@@ -505,7 +504,6 @@ footer {
     opacity: 1;
     transition: all 0.3s ease;
     mix-blend-mode: multiply;
-    /* Helps integrate jpegs with white backgrounds if needed */
 }
 
 .clients-grid img:hover {
@@ -661,7 +659,7 @@ footer {
 
 .testimonial-card {
     background: var(--white);
-    padding: 5;
+    padding: 5px;
     border-radius: 5px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s;
